@@ -1,0 +1,19 @@
+/* Se o que sobrescreve tem que estar exatamente com a mesma propriedade!! Ou seja, se no .container está padding-left/right, para ele pagar os 2 aqui, tem que ser top/bottom!! */
+.termos {
+  padding: 80px 20px;
+}
+
+.termos h2 {
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+/* estiliza todo H2 que vier depois de um P */
+.termos p + h2 {
+  margin-top: 40px;
+}
+
+.termos p {
+  max-width: 75ch;
+  margin-bottom: 24px;
+}
