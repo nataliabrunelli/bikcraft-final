@@ -62,7 +62,7 @@
   display: inline-block;
   width: 18px;
   height: 10px;
-  background: url(../../src/img/icones/seta.svg);
+  background: url(../../img/icones/seta.svg);
   margin-left: 12px;
   transition: transform 0.2s;
 }
