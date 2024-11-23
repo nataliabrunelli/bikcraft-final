@@ -14,7 +14,11 @@
   <meta name="description" content="Seguros das bicicletas elétricas Bikcraft.">
   <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
 
-  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="preload" href="./src/css/style.min.css" as="style">
+  <link rel="stylesheet" href="./src/css/style.min.css">
+  <script>
+    document.documentElement.classList.add("js")
+  </script>
 </head>
 
 <body id="seguros">
@@ -48,7 +52,7 @@
 
     <!-- CORPO -->
     <div class="seguros container">
-      <div class="seguros-item">
+      <div class="seguros-item fadeInLeft" data-anime="100">
         <h3 class="font-1-xl cor-6">PRATA</h3>
         <span class="font-1-xl cor-0">R$ 199 <span class="font-1-xs cor-6">mensal</span></span>
         <ul class="font-2-m cor-0">
@@ -59,7 +63,7 @@
         </ul>
         <a class="btn secundario" href="./orcamento.html?tipo=seguro&produto=prata">Inscreva-se</a>
       </div>
-      <div class="seguros-item">
+      <div class="seguros-item fadeInRight" data-anime="300">
         <h3 class="font-1-xl cor-p1">OURO</h3>
         <span class="font-1-xl cor-0">R$ 299 <span class="font-1-xs cor-6">mensal</span></span>
         <ul class="font-2-m cor-0">
@@ -117,28 +121,28 @@
     <h2 class="font-1-xxl">perguntas frequentes<span class="cor-p1">.</span></h2>
     <dl>
       <div>
-        <dt class="font-1-m-b">Qual forma de pagamento vocês aceitam?</dt>
-        <dd class="font-2-s cor-9">Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitarmos PIX e Boleto através do PagSeguro.</dd>
+        <dt><button class="font-1-m-b" aria-controls="pergunta1" aria-expanded="true">Qual forma de pagamento vocês aceitam?</button></dt>
+        <dd class="font-2-s cor-9 ativa" id="pergunta1">Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitarmos PIX e Boleto através do PagSeguro.</dd>
       </div>
       <div>
-        <dt class="font-1-m-b">Como posso entrar em contato?</dt>
-        <dd class="font-2-s cor-9">Entre em contato pelo telefone ou WhatsApp +55 21 9999-9999, ou nos envie um e-mail para contato@bikcraft.com.</dd>
+        <dt><button class="font-1-m-b" aria-controls="pergunta2" aria-expanded="false">Como posso entrar em contato?</button></dt>
+        <dd class="font-2-s cor-9" id="pergunta2">Entre em contato pelo telefone ou WhatsApp +55 21 9999-9999, ou nos envie um e-mail para contato@bikcraft.com.</dd>
       </div>
       <div>
-        <dt class="font-1-m-b">Vocês possuem algum desconto?</dt>
-        <dd class="font-2-s cor-9">Possuímos desconto gradual de fidelidade a partir da compra da sua segunda Bikcraft.</dd>
+        <dt><button class="font-1-m-b" aria-controls="pergunta3" aria-expanded="false">Vocês possuem algum desconto?</button></dt>
+        <dd class="font-2-s cor-9" id="pergunta3">Possuímos desconto gradual de fidelidade a partir da compra da sua segunda Bikcraft.</dd>
       </div>
       <div>
-        <dt class="font-1-m-b">Qual a garantia que possuo?</dt>
-        <dd class="font-2-s cor-9">Garantia completa de 5 anos para qualquer defeito de fabricação mais as garantias específicas oferecidas por cada pacote de seguro.</dd>
+        <dt><button class="font-1-m-b" aria-controls="pergunta4" aria-expanded="false">Qual a garantia que possuo?</button></dt>
+        <dd class="font-2-s cor-9" id="pergunta4">Garantia completa de 5 anos para qualquer defeito de fabricação mais as garantias específicas oferecidas por cada pacote de seguro.</dd>
       </div>
       <div>
-        <dt class="font-1-m-b">Posso parcelar no boleto?</dt>
-        <dd class="font-2-s cor-9">Por enquanto só aceitamos parcelamentos via cartões de crédito.</dd>
+        <dt><button class="font-1-m-b" aria-controls="pergunta5" aria-expanded="false">Posso parcelar no boleto?</button></dt>
+        <dd class="font-2-s cor-9" id="pergunta5">Por enquanto só aceitamos parcelamentos via cartões de crédito.</dd>
       </div>
       <div>
-        <dt class="font-1-m-b">Quantas trocas posso fazer ao ano?</dt>
-        <dd class="font-2-s cor-9">Para o seguro PRATA são permitidas 2 trocas por ano e para o seguro OURO, 5 trocas por ano.</dd>
+        <dt><button class="font-1-m-b" aria-controls="pergunta6" aria-expanded="false">Quantas trocas posso fazer ao ano?</button></dt>
+        <dd class="font-2-s cor-9" id="pergunta6">Para o seguro PRATA são permitidas 2 trocas por ano e para o seguro OURO, 5 trocas por ano.</dd>
       </div>
     </dl>
   </article>
@@ -174,6 +178,9 @@
       <p class="font-2-m cor-6 footer-copy">Bikcraft &copy Alguns direitos reservados.</p>
     </div>
   </footer>
+
+  <script src="./src/js/plugins/simple-anime.js"></script>
+  <script src="./src/js/script.js"></script>
 </body>
 
 </html>
